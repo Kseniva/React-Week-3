@@ -1,0 +1,38 @@
+@import '../../styles/vars.scss';
+
+.container {
+    background-color: $background-color1;
+    height: 30rem;
+    margin:10rem;
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 1028px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 15rem;
+        min-height:120rem;
+        margin: 5rem 5rem 5rem 20rem;
+    }
+}
+
+@media (min-width: 660px) and (max-width: 796px) {
+    .container {
+        min-height:125rem;
+    }
+}
+
+@media (min-width: 411px) and (max-width: 659px) {
+    .container {
+        min-height:140rem;
+    }
+}
+
+@media (max-width: 410px)  {
+    .container {
+        min-height:190rem;
+    }
+}
