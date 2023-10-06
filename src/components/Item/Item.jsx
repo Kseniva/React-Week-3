@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import style from'./item.module.scss'
 
 export default function Item(props) {
-    const [selected, setSelected] = useState(props.item.color === 'red');
+    const [selected, setSelected] = useState(false);
+
     console.log(props);
     return (
-        <div className={`${style.root} ${selected && props.item.color === 'red' ? style.selected : ''}`} onClick={() => setSelected(!selected)}>
+        <div className={`${style.root} ${selected ? style.selected : ''}`} onClick={() => setSelected(!selected)}>
             <div className={style[props.item.color]}>
                 <h1 className={style.header}>{props.item.rateName}</h1>
             </div>
